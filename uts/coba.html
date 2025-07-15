@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Elektronik Rumah Tangga</title>
+  <meta name="description" content="Toko elektronik rumah tangga dengan produk seperti mesin cuci, kulkas, setrika, dan kompor listrik.">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-50 text-gray-800 font-sans">
+
+  <header class="bg-pink-600 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Toko Elektronik Rumah Tangga</h1>
+    <p class="text-center mt-1">Temukan kebutuhan elektronik terbaik untuk rumah Anda</p>
+  </header>
+
+  <main class="p-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300 p-4 text-center">
+      <img src="https://hisense.id/wp-content/uploads/2024/06/WSRB7013UB-productimg-1.jpg" class="mx-auto rounded-lg max-w-full h-auto" width="300" alt="Mesin Cuci" loading="lazy">
+      <h2 class="text-xl font-semibold mt-4">Mesin Cuci</h2>
+      <p class="text-pink-600 font-bold text-lg">Rp 3.000.000</p>
+      <button onclick="beliProduk('Mesin Cuci', 'Rp 3.000.000')" class="mt-3 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-300">Beli</button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300 p-4 text-center">
+      <img src="https://myhartono.com/images/detailed/386/SJ236MNHS-3.webp" class="mx-auto rounded-lg max-w-full h-auto" width="300" alt="Kulkas" loading="lazy">
+      <h2 class="text-xl font-semibold mt-4">Kulkas</h2>
+      <p class="text-pink-600 font-bold text-lg">Rp 10.200.000</p>
+      <button onclick="beliProduk('Kulkas', 'Rp 10.200.000')" class="mt-3 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-300">Beli</button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300 p-4 text-center">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFqPRyvr4_anCwfvKlDSQABfOPKpSjfbZKjw&s" class="mx-auto rounded-lg max-w-full h-auto" width="300" alt="Setrika" loading="lazy">
+      <h2 class="text-xl font-semibold mt-4">Setrika</h2>
+      <p class="text-pink-600 font-bold text-lg">Rp 170.000</p>
+      <button onclick="beliProduk('Setrika', 'Rp 170.000')" class="mt-3 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-300">Beli</button>
+    </div>
+
+    <div class="bg-white rounded-xl shadow hover:shadow-lg transition-shadow duration-300 p-4 text-center">
+      <img src="https://www.idealife-online.com/image-product/img9055-1715054139.jpg" class="mx-auto rounded-lg max-w-full h-auto" style="width:240px; height:241px;" alt="Kompor Listrik" loading="lazy">
+      <h2 class="text-xl font-semibold mt-4">Kompor Listrik</h2>
+      <p class="text-pink-600 font-bold text-lg">Rp 2.000.000</p>
+      <button onclick="beliProduk('Kompor Listrik', 'Rp 2.000.000')" class="mt-3 bg-pink-500 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition duration-300">Beli</button>
+    </div>
+
+  </main>
+
+  <footer class="bg-pink-600 text-white text-center p-6 mt-10">
+    <p class="mb-2">&copy; 2025 Toko Elektronik Rumah Tangga</p>
+    <a href="PERCOBAAN.html" class="underline hover:text-pink-200 transition">Kembali ke Beranda</a>
+  </footer>
+
+  <!-- Script Pembelian -->
+  <script>
+    function beliProduk(namaProduk, harga) {
+      alert(`Anda membeli: ${namaProduk} seharga ${harga}\n\nTerima kasih telah berbelanja di toko kami.`);
+      console.log(`Pembelian: ${namaProduk} - ${harga}`);
+    }
+  </script>
+
+</body>
+</html>

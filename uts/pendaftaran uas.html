@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pendaftaran Loker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+  <div class="container">
+    <h1>Formulir Pendaftaran Karyawan</h1>
+    <form id="formPendaftaran">
+      <label for="nama">Nama:</label>
+      <input type="text" name="nama" id="nama" required />
+
+      <label for="posisi">Posisi:</label>
+      <select name="posisi" id="posisi" required>
+        <option>Kasir</option>
+        <option>Pelayan</option>
+      </select>
+
+      <div class="radio-group">
+        <label>Jenis Kelamin:</label><br />
+        <input type="radio" name="jk" value="Laki-laki" id="jk1" required /><label for="jk1">Laki-laki</label><br />
+        <input type="radio" name="jk" value="Perempuan" id="jk2" /><label for="jk2">Perempuan</label>
+      </div>
+
+      <div class="checkbox-group">
+        <label>Keahlian:</label><br />
+        <input type="checkbox" name="skill" value="membelah bumi" id="skill1" /><label for="skill1">membelah bumi</label><br />
+        <input type="checkbox" name="skill" value="kebal bacok" id="skill2" /><label for="skill2">kebal bacok</label>
+      </div>
+
+      <label for="password">Kata Sandi:</label>
+      <input type="password" name="password" id="password" required />
+
+      <label for="motivasi">Motivasi/Pengalaman:</label>
+      <textarea name="motivasi" id="motivasi" rows="4" required></textarea>
+
+      <input type="submit" value="Kirim" />
+    </form>
+
+    <div class="message" id="pesanTerima">
+      Terima kasih Anda telah mendaftar 🙂 
+    </div>
+
+    <a class="back-link" href="beranda uas.html">⟵ Kembali ke Beranda</a>
+  </div>
+
+  <script>
+    const form = document.getElementById("formPendaftaran");
+    const pesan = document.getElementById("pesanTerima");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const skills = document.querySelectorAll('input[name="skill"]:checked');
+      const selectedSkills = Array.from(skills).map(skill => skill.value).join(', ') || 'Tidak ada keahlian yang dipilih';
+
+      form.style.display = "none";
+      pesan.textContent = `Terima kasih Anda telah mendaftar 🙂\nKeahlian Anda: ${selectedSkills}`;
+      pesan.style.display = "block";
+    });
+  </script>
+</body>
+</html>
